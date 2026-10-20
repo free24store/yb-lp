@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YB Intelligence シネマティックLP</title>
+<meta name="description" content="動きで惹きつける。シネマティックLP・HP制作。月額3万円〜（税抜）＋初期制作費30万円〜（税抜）。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="そのWebサイト、記憶に残っていますか？｜YB Intelligence">
+<meta property="og:description" content="動きで惹きつける。シネマティックLP・HP制作。月額3万円〜（税抜）＋初期制作費30万円〜（税抜）。">
+<meta property="og:image" content="/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Meta Pixel: ここにピクセルのベースコードを貼り付け -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark}
+body{margin:0;background:#04070D;color:#EAF2FF}
+a{color:#EAF2FF}a:hover{color:#FFFFFF}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));box-sizing:border-box}
+a:focus-visible,button:focus-visible{outline:2px solid #9CCBFF;outline-offset:3px}
+.copy{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(190,220,255,.45);background:transparent;color:#EAF2FF;font:inherit;font-size:14px;cursor:pointer}
+.serif{font-family:'Shippori Mincho B1','Hiragino Mincho ProN',serif}
+.latin{font-family:'Cormorant Garamond',serif}
+.h1{font-size:clamp(40px,7.6vw,112px)}
+.h2{font-size:clamp(30px,4.8vw,64px)}
+.big{font-size:clamp(64px,13vw,200px)}
+@media (max-width:720px){.sec{padding-top:88px !important;padding-bottom:88px !important}.hide-sp{display:none !important}}
+
+/* ---------- cinematic intro ---------- */
+@keyframes lbTop{0%,35%{transform:translateY(0)}100%{transform:translateY(-101%)}}
+@keyframes lbBot{0%,35%{transform:translateY(0)}100%{transform:translateY(101%)}}
+.lb-t{animation:lbTop 2.2s cubic-bezier(.7,0,.2,1) both}
+.lb-b{animation:lbBot 2.2s cubic-bezier(.7,0,.2,1) both}
+@keyframes lineIn{from{opacity:0;transform:translateY(70%);filter:blur(14px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:none;filter:blur(0);clip-path:inset(0 0 0 0)}}
+.ln{display:block;animation:lineIn 1.4s cubic-bezier(.2,.7,.1,1) both}
+.d1{animation-delay:1.1s}.d2{animation-delay:1.45s}.d3{animation-delay:1.9s}.d4{animation-delay:2.2s}.d5{animation-delay:2.5s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.fu{animation:fadeUp 1.2s ease-out both}
+
+/* ---------- atmosphere ---------- */
+@keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+.kb{animation:kb 9s ease-out both;transform-origin:50% 80%}
+@keyframes drift{from{transform:translateX(-12%)}to{transform:translateX(12%)}}
+.fog1{animation:drift 26s ease-in-out infinite alternate}
+.fog2{animation:drift 34s ease-in-out infinite alternate-reverse}
+@keyframes twinkle{0%,100%{opacity:.35}50%{opacity:1}}
+.stars{animation:twinkle 5s ease-in-out infinite}
+.stars2{animation:twinkle 7s ease-in-out infinite 1.5s}
+@keyframes rim{0%,100%{opacity:.55}50%{opacity:1}}
+.rim{animation:rim 6s ease-in-out infinite;filter:drop-shadow(0 0 6px var(--ac)) drop-shadow(0 0 18px var(--ac))}
+@keyframes halo{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:.9;transform:scale(1.06)}}
+.halo{animation:halo 8s ease-in-out infinite}
+@keyframes shimmer{from{background-position:120% 0}to{background-position:-120% 0}}
+.glowtext{background:linear-gradient(100deg,#7DB9FF 20%,#EAF6FF 45%,#7DB9FF 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 4.5s linear infinite 2.6s;filter:drop-shadow(0 0 22px rgba(77,163,255,.55))}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(0,0)}}
+.grain{animation:grain .9s steps(4) infinite}
+@keyframes scrollCue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.cue{animation:scrollCue 2.4s ease-in-out infinite}
+@keyframes sweep{from{transform:translateX(-120%) skewX(-20deg)}to{transform:translateX(320%) skewX(-20deg)}}
+.sweep{animation:sweep 3.6s ease-in-out infinite 3s}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq{display:flex;width:max-content;animation:mq 38s linear infinite}
+.mq-r{animation-direction:reverse;animation-duration:46s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float{animation:float 7s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(77,163,255,.55),0 10px 40px rgba(77,163,255,.35)}60%{box-shadow:0 0 0 14px rgba(77,163,255,0),0 10px 40px rgba(77,163,255,.35)}}
+.cta{animation:pulse 2.8s ease-out infinite;transition:transform .3s ease}
+.cta:hover{transform:translateY(-2px)}
+.wk .wk-m{transition:transform 1.2s cubic-bezier(.2,.7,.1,1)}
+.wk:hover .wk-m{transform:scale(1.05)}
+.wk{transition:border-color .4s ease}
+.wk:hover{border-color:rgba(125,185,255,.6) !important}
+
+/* ---------- scroll-linked (Chrome/Edge/Safari 26+) ---------- */
+@supports (animation-timeline: view()){
+@keyframes pxFar{to{transform:translateY(90px)}}
+@keyframes pxMid{to{transform:translateY(170px)}}
+@keyframes pxNear{to{transform:translateY(260px)}}
+@keyframes heroOut{to{opacity:0;transform:translateY(-120px) scale(.96);filter:blur(8px)}}
+.px-far{animation:pxFar linear both;animation-timeline:scroll(root);animation-range:0 900px}
+.px-mid{animation:pxMid linear both;animation-timeline:scroll(root);animation-range:0 900px}
+.px-near{animation:pxNear linear both;animation-timeline:scroll(root);animation-range:0 900px}
+.hero-out{animation:heroOut linear both;animation-timeline:scroll(root);animation-range:120px 760px}
+@keyframes rv{from{opacity:0;transform:translateY(64px);filter:blur(12px)}to{opacity:1;transform:none;filter:blur(0)}}
+.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+@keyframes rvL{from{opacity:0;transform:translateX(-80px)}to{opacity:1;transform:none}}
+.rvl{animation:rvL linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+@keyframes zoomIn{from{transform:scale(1.35);opacity:.2}to{transform:scale(1);opacity:1}}
+.zi{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.grow{transform-origin:left;animation:grow linear both;animation-timeline:view();animation-range:entry 30% cover 60%}
+@keyframes iris{from{clip-path:inset(18% 30% 18% 30% round 24px)}to{clip-path:inset(0 0 0 0 round 0)}}
+.iris{animation:iris linear both;animation-timeline:view();animation-range:entry 10% cover 50%}
+@keyframes spread{from{letter-spacing:.6em;opacity:0}to{letter-spacing:-.02em;opacity:1}}
+.spread{animation:spread linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+}
+
+/* ---------- motion controls ---------- */
+.motion-off *,.motion-off *::before,.motion-off *::after{animation:none !important;transition:none !important}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+
+<div class="root" style="--ac: #4DA3FF; font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif; color: #EAF2FF; background: #04070D; width: 100%; line-height: 1.8; -webkit-font-smoothing: antialiased; overflow-x: hidden">
+
+<!-- ================= HERO ================= -->
+<section style="position: relative; min-height: 760px; height: 100vh; overflow: hidden; background: radial-gradient(120% 80% at 50% 0%, #10264A 0%, #071123 45%, #04070D 100%)">
+
+<!-- stars -->
+<div class="stars" aria-hidden="true" style="position: absolute; top: 6%; left: 0; width: 2px; height: 2px; border-radius: 50%; background: #CFE4FF; box-shadow: 120px 40px #CFE4FF, 260px 120px #9FC6FF, 410px 30px #CFE4FF, 560px 160px #CFE4FF, 700px 70px #9FC6FF, 880px 140px #CFE4FF, 1010px 20px #CFE4FF, 1150px 110px #9FC6FF, 1290px 60px #CFE4FF, 1400px 180px #CFE4FF, 1600px 90px #9FC6FF, 1800px 40px #CFE4FF"></div>
+<div class="stars2" aria-hidden="true" style="position: absolute; top: 14%; left: 0; width: 1px; height: 1px; border-radius: 50%; background: #FFFFFF; box-shadow: 60px 90px #FFF, 330px 20px #FFF, 480px 210px #FFF, 640px 120px #FFF, 790px 230px #FFF, 960px 60px #FFF, 1080px 200px #FFF, 1230px 140px #FFF, 1370px 10px #FFF, 1520px 170px #FFF, 1700px 110px #FFF"></div>
+
+<!-- halo behind summit -->
+<div class="halo" aria-hidden="true" style="position: absolute; left: 50%; top: 46%; width: 900px; height: 520px; margin-left: -450px; border-radius: 50%; background: radial-gradient(closest-side, rgba(77,163,255,.42), rgba(77,163,255,.12) 55%, rgba(77,163,255,0))"></div>
+
+<!-- mountains -->
+<div class="kb" style="position: absolute; left: 0; right: 0; bottom: 0; height: 68%">
+<svg class="px-far" aria-hidden="true" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<path d="M0 420 L120 360 L220 392 L340 300 L460 352 L560 262 L660 332 L760 246 L880 322 L1000 272 L1120 342 L1240 292 L1340 332 L1440 300 L1440 600 L0 600 Z" fill="#0D1B33"></path>
+</svg>
+<svg class="px-mid" aria-hidden="true" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<path d="M0 472 L140 402 L260 452 L380 372 L520 432 L640 340 L720 296 L800 350 L940 420 L1060 382 L1200 442 L1320 402 L1440 452 L1440 600 L0 600 Z" fill="#081326"></path>
+<path class="rim" d="M380 372 L520 432 L640 340 L720 296 L800 350 L940 420 L1060 382" fill="none" stroke="#7DB9FF" stroke-width="1.6" stroke-linejoin="round"></path>
+<circle cx="720" cy="279" r="4.2" fill="#03060C"></circle>
+<path d="M715.5 296 L716.6 284 L723.4 284 L724.5 296 Z" fill="#03060C"></path>
+</svg>
+<div class="fog1" aria-hidden="true" style="position: absolute; left: -20%; right: -20%; bottom: 18%; height: 34%; background: radial-gradient(50% 50% at 30% 60%, rgba(160,200,255,.22), rgba(160,200,255,0)), radial-gradient(40% 45% at 75% 50%, rgba(160,200,255,.18), rgba(160,200,255,0))"></div>
+<svg class="px-near" aria-hidden="true" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<path d="M0 540 L180 478 L320 530 L480 468 L620 520 L760 500 L900 542 L1080 480 L1240 532 L1440 498 L1440 600 L0 600 Z" fill="#03060C"></path>
+</svg>
+<div class="fog2" aria-hidden="true" style="position: absolute; left: -20%; right: -20%; bottom: -4%; height: 30%; background: radial-gradient(45% 55% at 60% 70%, rgba(140,185,255,.2), rgba(140,185,255,0)), radial-gradient(35% 50% at 20% 60%, rgba(140,185,255,.16), rgba(140,185,255,0))"></div>
+</div>
+
+<!-- film grain -->
+<svg class="grain" aria-hidden="true" style="position: absolute; left: -10%; top: -10%; width: 120%; height: 120%; opacity: .1; pointer-events: none; mix-blend-mode: overlay">
+<filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence></filter>
+<rect width="100%" height="100%" filter="url(#gr)"></rect>
+</svg>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.6) 100%); pointer-events: none"></div>
+
+<!-- header -->
+<header style="position: relative; z-index: 3">
+<div class="wrap fu d3" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-top: 22px; padding-bottom: 22px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span class="serif" style="font-size: 30px; font-weight: 800; letter-spacing: -0.04em">YB</span>
+<span class="latin" style="font-size: 20px; letter-spacing: 0.06em">YB Intelligence</span>
+</div>
+<div style="display: flex; align-items: center; gap: 20px">
+<span class="latin hide-sp" style="font-size: 16px; letter-spacing: 0.28em; color: #A9C3E6">Move. Impress.</span>
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 999px; border: 1px solid rgba(125,185,255,.5); background: rgba(10,26,52,.55); color: #EAF2FF; font-size: 14px; font-weight: 700; text-decoration: none">無料相談</a>
+</div>
+</div>
+</header>
+
+<!-- hero copy -->
+<div class="hero-out" style="position: relative; z-index: 2">
+<div class="wrap" style="padding-top: 4vh; text-align: center">
+<h1 class="h1 serif" style="margin: 0; font-weight: 800; line-height: 1.18; letter-spacing: -0.01em">
+<span class="ln d1">そのWebサイト、</span>
+<span class="ln d2"><span class="glowtext">記憶</span>に残っていますか？</span>
+</h1>
+<p class="ln d3 serif" style="margin: 22px 0 0; font-size: clamp(18px, 2.2vw, 28px); font-weight: 700; color: #DCE9FA">動きで惹きつける。シネマティックLP・HP制作</p>
+<div class="ln d4" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 26px">
+<span style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid rgba(125,185,255,.38); background: rgba(8,20,42,.6); font-size: 15px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7DB9FF" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5 L15.5 12 L10 15.5 Z"></path></svg>スクロール連動演出</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid rgba(125,185,255,.38); background: rgba(8,20,42,.6); font-size: 15px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7DB9FF" stroke-width="1.8" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"></path></svg>AI駆動開発</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid rgba(125,185,255,.38); background: rgba(8,20,42,.6); font-size: 15px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7DB9FF" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"></rect><path d="M11 18.5h2"></path></svg>スマホ最適化</span>
+</div>
+<div class="ln d5" style="margin-top: 34px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+<a href="#works" class="cta" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 60px; min-width: 300px; padding: 0 40px; border-radius: 999px; background: linear-gradient(180deg, #3D8CF0, #1F5FC4); border: 1px solid rgba(190,220,255,.6); color: #FFFFFF; font-size: 19px; font-weight: 700; text-decoration: none">
+<span class="sweep" aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; width: 30%; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.4), rgba(255,255,255,0))"></span>
+<span style="position: relative">制作事例を見る</span><span style="position: relative" aria-hidden="true">↓</span></a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 32px; margin-top: 6px">
+<div style="text-align: left">
+<div class="serif" style="font-size: 15px; font-weight: 700; color: #B9CDE8">シネマティックLP・HP</div>
+<div class="serif" style="font-size: clamp(36px, 4.2vw, 56px); font-weight: 800; line-height: 1.1"><span style="font-size: 0.6em">月額</span><span class="glowtext">3万円</span><span style="font-size: 0.6em">〜</span><span style="font-size: 15px; font-weight: 500">（税抜）</span></div>
+<div style="margin-top: 4px; font-size: 16px; font-weight: 700; color: #DCE9FA">＋ 初期制作費 30万円〜（税抜・初回のみ）</div>
+</div>
+<div aria-hidden="true" class="hide-sp" style="width: 1px; height: 72px; background: rgba(185,205,232,0.4)"></div>
+<div style="text-align: left; font-size: 15px; color: #B9CDE8">制作期間の目安<br><span class="serif" style="font-size: 28px; font-weight: 800; color: #9CCBFF">3〜4週間</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- scroll cue -->
+<div class="fu d5" aria-hidden="true" style="position: absolute; z-index: 2; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px">
+<span class="latin" style="font-size: 13px; letter-spacing: 0.32em; color: #A9C3E6">01 · SCROLL</span>
+<span class="cue" style="display: block; width: 1px; height: 54px; background: #A9C3E6"></span>
+</div>
+
+<!-- letterbox -->
+<div class="lb-t" aria-hidden="true" style="position: absolute; z-index: 5; left: 0; right: 0; top: 0; height: 50%; background: #000"></div>
+<div class="lb-b" aria-hidden="true" style="position: absolute; z-index: 5; left: 0; right: 0; bottom: 0; height: 50%; background: #000"></div>
+</section>
+
+<!-- ================= KINETIC BAND ================= -->
+<section aria-label="Move. Impress." style="padding-top: 40px; padding-bottom: 40px; border-top: 1px solid rgba(125,185,255,.14); border-bottom: 1px solid rgba(125,185,255,.14); overflow: hidden; background: #04070D">
+<div class="mq latin" aria-hidden="true" style="font-size: clamp(48px, 7vw, 104px); font-style: italic; line-height: 1.1; color: rgba(234,242,255,.12); gap: 64px; padding-right: 64px">
+<span>Move. Impress.</span><span style="color: rgba(125,185,255,.5)">動きで伝える。</span><span>Move. Impress.</span><span style="color: rgba(125,185,255,.5)">記憶に残す。</span><span>Move. Impress.</span><span style="color: rgba(125,185,255,.5)">動きで伝える。</span><span>Move. Impress.</span><span style="color: rgba(125,185,255,.5)">記憶に残す。</span>
+</div>
+</section>
+
+<!-- ================= CONCEPT ================= -->
+<section class="sec" style="padding-top: 160px; padding-bottom: 160px; background: linear-gradient(180deg, #04070D, #071226 60%, #04070D)">
+<div class="wrap" style="text-align: center">
+<p class="latin rv" style="margin: 0; font-size: 18px; letter-spacing: 0.32em; color: #7DB9FF">CONCEPT</p>
+<h2 class="h2 serif spread" style="margin: 20px 0 0; font-weight: 800; line-height: 1.3">見る、ではなく、進める。</h2>
+<p class="rv" style="margin: 32px auto 0; font-size: 18px; max-width: 700px; color: #C4D5EC">動画をコマ単位に分け、スクロールと完全に同期させます。指を動かすたびに物語が一コマずつ進み、ページそのものが一本のシネマに。見る人が自分の手で“再生”する体験です。</p>
+<div class="zi" style="margin: 72px auto 0; max-width: 980px; aspect-ratio: 2.39 / 1; border-radius: 4px; border: 1px solid rgba(125,185,255,.25); background: radial-gradient(80% 120% at 50% 100%, #12305E, #060D1C 70%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; top: 14px; left: 18px; font-size: 12px; letter-spacing: .2em; color: #A9C3E6" class="latin">REC ● 00:00:03:12</div>
+<div aria-hidden="true" style="position: absolute; bottom: 14px; right: 18px; font-size: 12px; letter-spacing: .2em; color: #A9C3E6" class="latin">2.39 : 1</div>
+<p style="margin: 0; font-size: 14px; color: #A9C3E6; line-height: 1.9">[シネマ映像：スクロール連動のデモ動画をここに差し替え]<br>（本番ではフレーム連番を canvas に描画）</p>
+</div>
+</div>
+</section>
+
+<!-- ================= WORKS ================= -->
+<section id="works" class="sec" style="padding-top: 140px; padding-bottom: 140px; background: #04070D">
+<div class="wrap">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div class="rvl">
+<p class="latin" style="margin: 0; font-size: 18px; letter-spacing: 0.32em; color: #7DB9FF">WORKS</p>
+<h2 class="h2 serif" style="margin: 14px 0 0; font-weight: 800; line-height: 1.3">ブランドの想いを、<br>動きで描く。</h2>
+</div>
+<p class="rv" style="margin: 0; max-width: 380px; font-size: 16px; color: #C4D5EC">公開中のページです。スマホでスクロールすると、違いが一番よくわかります。</p>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 40px; margin-top: 64px">
+
+<a href="https://somme-lp.vercel.app" class="wk rv" style="display: flex; flex-wrap: wrap; text-decoration: none; color: #EAF2FF; border: 1px solid rgba(125,185,255,.18); border-radius: 8px; overflow: hidden; background: #071022">
+<div class="iris" style="flex: 999 1 520px; min-width: 0; aspect-ratio: 16 / 9; overflow: hidden; position: relative">
+<div class="wk-m" style="width: 100%; height: 100%; background: radial-gradient(90% 90% at 70% 30%, #1B4A8C, #081429 70%); display: flex; align-items: center; justify-content: center; font-size: 14px; color: #A9C3E6">[somme-preview.mp4 を差し替え]</div>
+</div>
+<div style="flex: 1 1 320px; padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 10px">
+<span class="latin" style="font-size: 15px; letter-spacing: .24em; color: #7DB9FF">01 — LP</span>
+<span class="serif" style="font-size: 28px; font-weight: 800">SOMME PMO service</span>
+<span style="font-size: 15px; color: #C4D5EC">外部PMO代行サービスのLP。スクロール連動動画5本で構成。</span>
+<span style="margin-top: 10px; font-size: 15px; font-weight: 700; color: #9CCBFF">サイトを見る →</span>
+</div>
+</a>
+
+<a href="https://somme.shop/" class="wk rv" style="display: flex; flex-wrap: wrap-reverse; text-decoration: none; color: #EAF2FF; border: 1px solid rgba(125,185,255,.18); border-radius: 8px; overflow: hidden; background: #071022">
+<div style="flex: 1 1 320px; padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 10px">
+<span class="latin" style="font-size: 15px; letter-spacing: .24em; color: #7DB9FF">02 — HP</span>
+<span class="serif" style="font-size: 28px; font-weight: 800">SOMME Corporate Site</span>
+<span style="font-size: 15px; color: #C4D5EC">「SUM＝和」のコンセプトを、スクロール演出で表現したコーポレートサイト。</span>
+<span style="margin-top: 10px; font-size: 15px; font-weight: 700; color: #9CCBFF">サイトを見る →</span>
+</div>
+<div class="iris" style="flex: 999 1 520px; min-width: 0; aspect-ratio: 16 / 9; overflow: hidden">
+<div class="wk-m" style="width: 100%; height: 100%; background: radial-gradient(90% 90% at 30% 40%, #234F7E, #081429 70%); display: flex; align-items: center; justify-content: center; font-size: 14px; color: #A9C3E6">[somme-hp-preview.mp4 を差し替え]</div>
+</div>
+</a>
+
+<a href="https://gad-launch-lp.vercel.app" class="wk rv" style="display: flex; flex-wrap: wrap; text-decoration: none; color: #EAF2FF; border: 1px solid rgba(125,185,255,.18); border-radius: 8px; overflow: hidden; background: #071022">
+<div class="iris" style="flex: 999 1 520px; min-width: 0; aspect-ratio: 16 / 9; overflow: hidden">
+<div class="wk-m" style="width: 100%; height: 100%; background: radial-gradient(90% 90% at 60% 60%, #2A3F8F, #081429 70%); display: flex; align-items: center; justify-content: center; font-size: 14px; color: #A9C3E6">[gad-preview.mp4 を差し替え]</div>
+</div>
+<div style="flex: 1 1 320px; padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 10px">
+<span class="latin" style="font-size: 15px; letter-spacing: .24em; color: #7DB9FF">03 — LP</span>
+<span class="serif" style="font-size: 28px; font-weight: 800">GAD Launch LP</span>
+<span style="font-size: 15px; color: #C4D5EC">音楽アーティスト育成プロジェクトのライブイベントLP。日英対応。</span>
+<span style="margin-top: 10px; font-size: 15px; font-weight: 700; color: #9CCBFF">サイトを見る →</span>
+</div>
+</a>
+
+</div>
+<p style="margin: 24px 0 0; font-size: 13px; color: #8EA6C8">[成果数値は計測データがある事例のみ追記してください]</p>
+</div>
+</section>
+
+<!-- ================= VALUES ================= -->
+<section class="sec" style="padding-top: 140px; padding-bottom: 140px; background: linear-gradient(180deg, #04070D, #0A1A36)">
+<div class="wrap">
+<p class="latin rv" style="margin: 0; font-size: 18px; letter-spacing: 0.32em; color: #7DB9FF; text-align: center">WHAT YOU GET</p>
+<h2 class="h2 serif rv" style="margin: 14px 0 0; font-weight: 800; line-height: 1.3; text-align: center">つくって終わり、にしない。</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 64px">
+<div class="rv float" style="padding: 36px 30px; border-radius: 10px; border: 1px solid rgba(125,185,255,.28); background: rgba(8,20,42,.7)">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7DB9FF" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="M7 5v14M17 5v14M3 9.5h4M3 14.5h4M17 9.5h4M17 14.5h4"></path></svg>
+<h3 class="serif" style="margin: 18px 0 0; font-size: 22px; font-weight: 800">シネマティックなデザイン</h3>
+<p style="margin: 10px 0 0; font-size: 15px; color: #C4D5EC">世界観を、構図とカメラワークから設計します。</p>
+</div>
+<div class="rv float" style="padding: 36px 30px; border-radius: 10px; border: 1px solid rgba(125,185,255,.28); background: rgba(8,20,42,.7); animation-delay: .8s">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7DB9FF" stroke-width="1.6" aria-hidden="true"><path d="M4 20V14M9 20V10M14 20V12M19 20V5"></path><path d="M3 20.5h18"></path></svg>
+<h3 class="serif" style="margin: 18px 0 0; font-size: 22px; font-weight: 800">導線を考えた構成設計</h3>
+<p style="margin: 10px 0 0; font-size: 15px; color: #C4D5EC">広告・SNSからの着地を前提に、問い合わせまでの流れを組み立てます。</p>
+</div>
+<div class="rv float" style="padding: 36px 30px; border-radius: 10px; border: 1px solid rgba(125,185,255,.28); background: rgba(8,20,42,.7); animation-delay: 1.6s">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7DB9FF" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="3.2"></circle><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"></path></svg>
+<h3 class="serif" style="margin: 18px 0 0; font-size: 22px; font-weight: 800">公開後の運用サポート</h3>
+<p style="margin: 10px 0 0; font-size: 15px; color: #C4D5EC">修正サブスクで、公開後も月2回〜週1回の更新に対応します。</p>
+</div>
+<div class="rv float" style="padding: 36px 30px; border-radius: 10px; border: 1px solid rgba(125,185,255,.28); background: rgba(8,20,42,.7); animation-delay: 2.4s">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7DB9FF" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"></path></svg>
+<h3 class="serif" style="margin: 18px 0 0; font-size: 22px; font-weight: 800">業種を問わない対応</h3>
+<p style="margin: 10px 0 0; font-size: 15px; color: #C4D5EC">飲食・不動産・医療・IT・ブランドまで。業種ごとの表現ルールも踏まえて進めます。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="sec" style="padding-top: 140px; padding-bottom: 140px; background: #0A1A36">
+<div class="wrap">
+<p class="latin rv" style="margin: 0; font-size: 18px; letter-spacing: 0.32em; color: #7DB9FF">PROCESS</p>
+<h2 class="h2 serif rv" style="margin: 14px 0 0; font-weight: 800; line-height: 1.3">公開まで、目安<span class="glowtext">3〜4週間</span>。</h2>
+<div style="position: relative; margin-top: 72px">
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: rgba(125,185,255,.18)"></div>
+<div class="grow" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 6px; height: 3px; background: linear-gradient(90deg, #3D8CF0, #9CCBFF); box-shadow: 0 0 14px rgba(77,163,255,.8)"></div>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px">
+<li class="rv" style="padding-top: 36px; position: relative"><span aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #9CCBFF; box-shadow: 0 0 16px #4DA3FF"></span><div class="latin" style="font-size: 15px; letter-spacing: .2em; color: #9CCBFF">DAY 0</div><div class="serif" style="margin-top: 6px; font-size: 20px; font-weight: 800">ヒアリング</div><div style="margin-top: 4px; font-size: 14px; color: #C4D5EC">30分〜1時間</div></li>
+<li class="rv" style="padding-top: 36px; position: relative"><span aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #9CCBFF; box-shadow: 0 0 16px #4DA3FF"></span><div class="latin" style="font-size: 15px; letter-spacing: .2em; color: #9CCBFF">DAY 1–3</div><div class="serif" style="margin-top: 6px; font-size: 20px; font-weight: 800">コンセプト設計</div><div style="margin-top: 4px; font-size: 14px; color: #C4D5EC">構成・カメラワーク・コピーを確定</div></li>
+<li class="rv" style="padding-top: 36px; position: relative"><span aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #9CCBFF; box-shadow: 0 0 16px #4DA3FF"></span><div class="latin" style="font-size: 15px; letter-spacing: .2em; color: #9CCBFF">WEEK 1–2</div><div class="serif" style="margin-top: 6px; font-size: 20px; font-weight: 800">制作</div><div style="margin-top: 4px; font-size: 14px; color: #C4D5EC">映像生成・フレーム抽出・演出実装</div></li>
+<li class="rv" style="padding-top: 36px; position: relative"><span aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #9CCBFF; box-shadow: 0 0 16px #4DA3FF"></span><div class="latin" style="font-size: 15px; letter-spacing: .2em; color: #9CCBFF">WEEK 3</div><div class="serif" style="margin-top: 6px; font-size: 20px; font-weight: 800">初稿確認</div><div style="margin-top: 4px; font-size: 14px; color: #C4D5EC">レビュー用URLで動きごと確認</div></li>
+<li class="rv" style="padding-top: 36px; position: relative"><span aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #9CCBFF; box-shadow: 0 0 16px #4DA3FF"></span><div class="latin" style="font-size: 15px; letter-spacing: .2em; color: #9CCBFF">WEEK 3–4</div><div class="serif" style="margin-top: 6px; font-size: 20px; font-weight: 800">修正・公開</div><div style="margin-top: 4px; font-size: 14px; color: #C4D5EC">本番環境へデプロイ</div></li>
+</ol>
+</div>
+<p style="margin: 28px 0 0; font-size: 13px; color: #8EA6C8">内容の複雑さにより前後します。</p>
+</div>
+</section>
+
+<!-- ================= PRICE ================= -->
+<section id="price" class="sec" style="padding-top: 140px; padding-bottom: 140px; background: linear-gradient(180deg, #0A1A36, #04070D)">
+<div class="wrap">
+<p class="latin rv" style="margin: 0; font-size: 18px; letter-spacing: 0.32em; color: #7DB9FF; text-align: center">PRICE</p>
+<h2 class="h2 serif rv" style="margin: 14px 0 0; font-weight: 800; line-height: 1.3; text-align: center">月額3万円〜で、動き続けるWebを。</h2>
+
+<div class="rv" style="margin: 48px auto 0; max-width: 860px; display: flex; flex-wrap: wrap; align-items: stretch; justify-content: center; gap: 12px">
+<div style="flex: 1 1 280px; padding: 28px; border-radius: 10px; border: 1px solid rgba(125,185,255,.35); background: rgba(8,20,42,.7); text-align: center">
+<div style="font-size: 14px; color: #A9C3E6">① 毎月・公開後の修正と運用</div>
+<div class="serif" style="margin-top: 6px; font-size: 22px; font-weight: 800">修正サブスク</div>
+<div class="serif" style="margin-top: 4px; font-size: 44px; font-weight: 800; line-height: 1.2">月額<span class="glowtext">3万円</span>〜<span style="font-size: 15px; font-weight: 500">（税抜）</span></div>
+</div>
+<div aria-hidden="true" class="serif" style="display: flex; align-items: center; font-size: 36px; color: #7DB9FF">＋</div>
+<div style="flex: 1 1 280px; padding: 28px; border-radius: 10px; border: 1px solid rgba(125,185,255,.35); background: rgba(8,20,42,.7); text-align: center">
+<div style="font-size: 14px; color: #A9C3E6">② 初回のみ</div>
+<div class="serif" style="margin-top: 6px; font-size: 22px; font-weight: 800">初期制作費</div>
+<div class="serif" style="margin-top: 4px; font-size: 34px; font-weight: 800; line-height: 1.5">30万円〜<span style="font-size: 15px; font-weight: 500">（税抜）</span></div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 56px">
+<div class="rv" style="padding: 36px 32px; border-radius: 10px; border: 1px solid rgba(125,185,255,.22); background: #071022; display: flex; flex-direction: column; gap: 14px">
+<div class="latin" style="font-size: 16px; letter-spacing: .24em; color: #9CCBFF">ENTRY</div>
+<div class="serif" style="font-size: 22px; font-weight: 800">シネマティックLP</div>
+<div class="serif" style="font-size: 40px; font-weight: 800; line-height: 1.1">30万円<span style="font-size: 16px; font-weight: 500">〜（税抜）</span></div>
+<ul style="margin: 0; padding-left: 20px; font-size: 15px; color: #C4D5EC">
+<li>LP制作 1本</li>
+<li>スクロール連動動画 2〜3本</li>
+<li>修正サブスク：月2回プラン 3万円/月（税抜・別契約）</li>
+</ul>
+</div>
+<div class="rv" style="position: relative; padding: 36px 32px; border-radius: 10px; border: 1px solid rgba(156,203,255,.75); background: linear-gradient(180deg, #0F2A55, #071022); box-shadow: 0 0 60px rgba(77,163,255,.25); display: flex; flex-direction: column; gap: 14px">
+<div class="latin" style="font-size: 16px; letter-spacing: .24em; color: #9CCBFF">STANDARD</div>
+<div class="serif" style="font-size: 22px; font-weight: 800">LP ＋ HP</div>
+<div class="serif" style="font-size: 40px; font-weight: 800; line-height: 1.1">60万円<span style="font-size: 16px; font-weight: 500">〜（税抜）</span></div>
+<ul style="margin: 0; padding-left: 20px; font-size: 15px; color: #C4D5EC">
+<li>LP・HP一式制作</li>
+<li>スクロール連動動画 4〜6本</li>
+<li>スマホ最適化</li>
+<li>修正サブスク：週1回プラン 5万円/月（税抜・別契約）</li>
+</ul>
+</div>
+<div class="rv" style="padding: 36px 32px; border-radius: 10px; border: 1px solid rgba(125,185,255,.22); background: #071022; display: flex; flex-direction: column; gap: 14px">
+<div class="latin" style="font-size: 16px; letter-spacing: .24em; color: #9CCBFF">PREMIUM</div>
+<div class="serif" style="font-size: 22px; font-weight: 800">フルオーダーメイド</div>
+<div class="serif" style="font-size: 40px; font-weight: 800; line-height: 1.1">100万円<span style="font-size: 16px; font-weight: 500">〜（税抜）</span></div>
+<ul style="margin: 0; padding-left: 20px; font-size: 15px; color: #C4D5EC">
+<li>完全オリジナル設計・動画本数は個別相談</li>
+<li>独自ドメイン設定</li>
+<li>修正サブスク：週1回プラン 5万円/月（税抜・別契約）＋優先対応</li>
+<li>月1回のヒートマップ分析レポート</li>
+<li>追加LP1本 半額（公開後6か月以内・サブスク継続中）</li>
+</ul>
+</div>
+</div>
+
+<div class="rv" style="margin-top: 32px; padding: 28px 32px; border-radius: 10px; border: 1px solid rgba(125,185,255,.22)">
+<h3 class="serif" style="margin: 0; font-size: 19px; font-weight: 800">ご契約前にご確認ください</h3>
+<ul style="margin: 12px 0 0; padding-left: 20px; font-size: 14px; color: #C4D5EC">
+<li>表示金額はすべて税抜の目安です。規模に応じて個別にお見積りします。</li>
+<li>修正サブスクは制作費とは別の月額契約です。初稿提出月の末日まで（初稿が20日以降なら翌月末まで）の調整は制作費に含まれます。解約後もサイトは公開されたままです。</li>
+<li>制作物のフッターに「Produced by YB Intelligence」を表記します。非表示は制作費の10%（税抜）のオプションです。</li>
+<li>映像の多くはAIで生成しています。実写撮影は含みません。</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec" style="padding-top: 120px; padding-bottom: 120px; background: #04070D">
+<div class="wrap" style="max-width: 880px">
+<p class="latin rv" style="margin: 0; font-size: 18px; letter-spacing: 0.32em; color: #7DB9FF">FAQ</p>
+<div style="margin-top: 28px">
+<div class="rv" style="padding: 26px 0; border-bottom: 1px solid rgba(125,185,255,.16)"><h3 class="serif" style="margin: 0; font-size: 19px; font-weight: 800">広告やSNSの着地ページとして使えますか？</h3><p style="margin: 8px 0 0; font-size: 15px; color: #C4D5EC">はい。スマホ表示を前提に設計します。計測タグの設置は、ご利用の媒体に合わせてヒアリング時にご相談ください。</p></div>
+<div class="rv" style="padding: 26px 0; border-bottom: 1px solid rgba(125,185,255,.16)"><h3 class="serif" style="margin: 0; font-size: 19px; font-weight: 800">動きが多いと、表示が重くなりませんか？</h3><p style="margin: 8px 0 0; font-size: 15px; color: #C4D5EC">コマ画像の圧縮と段階的な読み込みで、スマホ回線でも動くよう調整します。動きを抑える設定の端末では、静かな表示に切り替わります。</p></div>
+<div class="rv" style="padding: 26px 0; border-bottom: 1px solid rgba(125,185,255,.16)"><h3 class="serif" style="margin: 0; font-size: 19px; font-weight: 800">動画や素材の権利はどうなりますか？</h3><p style="margin: 8px 0 0; font-size: 15px; color: #C4D5EC">納品後は貴社で自由にご利用いただけます（フッターのクレジット表記をお願いしています）。</p></div>
+<div class="rv" style="padding: 26px 0; border-bottom: 1px solid rgba(125,185,255,.16)"><h3 class="serif" style="margin: 0; font-size: 19px; font-weight: 800">修正サブスクを解約したらどうなりますか？</h3><p style="margin: 8px 0 0; font-size: 15px; color: #C4D5EC">サイトは公開されたままです。以降の修正・更新が止まるだけで、再開はいつでも可能です。</p></div>
+</div>
+</div>
+</section>
+
+<!-- ================= FINAL / CONTACT ================= -->
+<section id="contact" style="position: relative; overflow: hidden; padding-top: 180px; padding-bottom: 220px; background: radial-gradient(90% 70% at 50% 100%, #1B4A8C 0%, #0A1A36 40%, #04070D 80%)">
+<svg aria-hidden="true" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" style="position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 300px">
+<path d="M0 220 L160 150 L300 200 L460 120 L600 180 L720 90 L840 170 L1000 110 L1160 190 L1300 140 L1440 200 L1440 300 L0 300 Z" fill="#03060C"></path>
+<path class="rim" d="M300 200 L460 120 L600 180 L720 90 L840 170 L1000 110 L1160 190" fill="none" stroke="#7DB9FF" stroke-width="1.4"></path>
+</svg>
+<div class="wrap" style="position: relative; text-align: center">
+<p class="latin rv" style="margin: 0; font-size: 18px; letter-spacing: 0.32em; color: #9CCBFF">CONTACT</p>
+<h2 class="h2 serif rv" style="margin: 18px auto 0; font-weight: 800; line-height: 1.35; max-width: 860px">次に記憶に残るのは、<br><span class="glowtext">あなたのWeb</span>です。</h2>
+<p class="rv" style="margin: 28px auto 0; font-size: 18px; max-width: 620px; color: #C4D5EC">ご相談・お見積りは無料です。今のサイトのURLを添えていただければ、どこに動きを入れると効くかをお返しします。</p>
+<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 44px">
+<a href="mailto:yb.intelligence8621@gmail.com" class="cta" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; min-width: 280px; padding: 0 40px; border-radius: 999px; background: linear-gradient(180deg, #3D8CF0, #1F5FC4); border: 1px solid rgba(190,220,255,.6); color: #FFFFFF; font-size: 19px; font-weight: 700; text-decoration: none">メールで無料相談する</a>
+<a href="#" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 36px; border-radius: 999px; border: 1px solid rgba(190,220,255,.45); color: #EAF2FF; font-size: 17px; font-weight: 700; text-decoration: none">[LINE／予約フォームURL]</a>
+</div>
+<div style="margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px"><span id="mail" style="font-size: 15px; color: #DCE9FA; user-select: all">yb.intelligence8621@gmail.com</span><button type="button" class="copy" id="copyMail">アドレスをコピー</button></div>
+</div>
+</section>
+
+<footer style="background: #03060C; border-top: 1px solid rgba(125,185,255,.14)">
+<div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-top: 32px; padding-bottom: 40px; font-size: 13px; color: #8EA6C8">
+<div>YB INTELLIGENCE株式会社 ／ 代表 山本 晶大 ／ 福岡県福岡市[番地まで要記載]</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<a href="#" style="color: #A9C3E6">プライバシーポリシー[URL]</a>
+<a href="#" style="color: #A9C3E6">特定商取引法に基づく表記[必要に応じて]</a>
+</div>
+</div>
+</footer>
+
+</div>
+
+<script>
+document.getElementById('copyMail').addEventListener('click',function(){var b=this,t=document.getElementById('mail').textContent;
+function ok(){b.textContent='コピーしました';setTimeout(function(){b.textContent='アドレスをコピー'},2000)}
+function fb(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='選択しました。コピーしてください'}
+try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}});
+</script>
+</body>
+</html>
